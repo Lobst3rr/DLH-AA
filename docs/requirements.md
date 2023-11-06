@@ -27,10 +27,11 @@ TODO: Describe each use case (at least one per team member).
 | **Actors** | BMX Rider, Skater |
 | **Assumptions** | Browser supports geo-location, user knows how to navigate basic applications</td></tr>
 | **Steps** | 1. Opt to view table of skate parks or BMX facilities 
-	2. Request permission to access user location 
+2. Request permission to access user location 
 	3. Give permission for geo-location
 	4. Get nearest Facilities for BMX riders and Skaters from database 
 	5. View table of nearest facilities fort BMX riders and skaters |
+	
 | **Variations** | 1. Browser does not support geo-location 
 		2. BMX only facilities. |
 | **Non-functional** | The application should run on most browsers |
