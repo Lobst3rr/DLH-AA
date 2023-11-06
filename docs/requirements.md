@@ -35,7 +35,6 @@ TODO: Describe each use case (at least one per team member).
 TODO: Your Use-Case diagram should include all use-cases.
 ![IMG_5906](https://github.com/Lobst3rr/DLH-AA/assets/148768725/788091c0-290d-4e15-ba81-332324f7faef)
 
-![Insert your Use-Case Diagram Here](images/use-case.png)
 
 ## Software Requirements Specification
 ### Functional requirements
