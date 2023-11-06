@@ -55,6 +55,8 @@ FR3: The system shall get ratings from google ratings <br>
 FR4: The system shall get traffic news from news <br>
 FR5: The system shall get bike routes from googlemap <br>
 FR6: The system shall get input from keyboard/user</b>
+FR7: The system won't share user data from system 
+FR8: The Sytem could show exact directions to location on map
 
 ### Non-Functional Requirements
 
