@@ -4,7 +4,10 @@
 
 ### User stories
 Ayrton Merritt suggests as a BMX rider I want to find BMX Facilities nearest to me so that I do not have to travel far
-Shawn Orozco suggests as a driver I want BMX riders to stay off the road so that I do not get stuck in traffic
+Shawn Orozco suggests as a driver I want BMX riders to stay off the road so that I do not get stuck in traffic.
+
+As a BMX rider I want to locate and find BMX facilities so that I'll be able to practice my tricks in a safe space
+and ride as much as I want. 
 
 ### Actors
 - BMX Riders 
