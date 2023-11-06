@@ -26,8 +26,7 @@ TODO: Describe each use case (at least one per team member).
 | **Description** | As a BMX Rider I want to find the nearest skate park or BMX facility to me |
 | **Actors** | BMX Rider, Skater |
 | **Assumptions** | Browser supports geo-location, user knows how to navigate basic applications</td></tr>
-| **Steps** | 1. Opt to view table of skate parks or BMX facilities 
-2. Request permission to access user location 
+| **Steps** | 1. Opt to view table of skate parks or BMX facilities 2. Request permission to access user location 
 	3. Give permission for geo-location
 	4. Get nearest Facilities for BMX riders and Skaters from database 
 	5. View table of nearest facilities fort BMX riders and skaters |
