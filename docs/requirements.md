@@ -49,7 +49,7 @@ TODO: Your Use-Case diagram should include all use-cases.
 
 ## Software Requirements Specification
 ### Functional requirements
-FR1: The system shall get user geo-location from navigator.geolocation
+FR1: The system shall get user geo-location from navigator.geolocation <br>
 FR2: The system shall get nearest BMX facilities from database 
 FR3: The system shall get ratings from google ratings
 FR4: The system shall get traffic news from news
