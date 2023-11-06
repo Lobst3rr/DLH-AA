@@ -24,5 +24,4 @@ The main risks of this project are:
 ## Project Scope
 TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
 
-![Insert your Context Diagram Here](![IMG_5903](https://github.com/Lobst3rr/DLH-AA/assets/148768725/08878510-30aa-4cc2-9450-37f88b1b0b9e)
-)
+![IMG_5903](https://github.com/Lobst3rr/DLH-AA/assets/148768725/efa1901d-39b4-4ad3-abf1-4c73542723d4)
