@@ -32,6 +32,17 @@ TODO: Describe each use case (at least one per team member).
 | **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
 
 
+| USE-CASE | UC2 | 
+| -------------------------------------- | ------------------- |
+| **Description** | As a social person I want to find a place to socialise |
+| **Actors** | citizen |
+| **Assumptions** | Browser supports geo-location, user knows how to navigate basic applications</td></tr>
+| **Steps** | <ol><li> Opt to view table of skate parks or BMX facilities</li> <li> Request permission to access user location</li> <li> Giver permission for geo-location</li> <li> locate nearest facility that is a hotspot </li> <li> view the facilities that has the best rating for a social spot</li> |	
+| **Variations** | <ol><li> Browser does not support geo-location </li> <li> less hot social spot BMX facility </li> |
+| **Non-functional** | The application should run on most browsers |
+| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+
+
 TODO: Your Use-Case diagram should include all use-cases.
 ![IMG_5906](https://github.com/Lobst3rr/DLH-AA/assets/148768725/788091c0-290d-4e15-ba81-332324f7faef)
 
