@@ -25,5 +25,5 @@ Query is the circle that is between BMX-Finder, Open Data Bristol, and Mapbox su
 TODO: Document each query to Bristol Open Data
 ![Image 06-05-2024 at 22 28](https://github.com/Lobst3rr/DLH-AA/assets/148768725/29d143e5-0478-4327-a902-e1ce695d1101)
 
+The UML diagram outlines a refined framework that bridges the gap between raw geographic data and practical, usable applications that can be manipulated and render the data forcefully for different end users. The BMX-Finder UML is also designed to interact with a set of feature that will be containing a specific amount of data that are organised into attributes and geometrical coordinates. 
 
-TODO: Repeat as necessary
