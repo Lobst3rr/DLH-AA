@@ -5,7 +5,7 @@
 when it comes to wireframes we know them as a visual representation of what a website layout would look like. Looking at 
 wireframes it is used to focus more on arrangements such as functionality rather than aesthetics and looks as if it is the 
 blueprint for building, outlining the form and the relation between different parts of the website without the whole detailed 
-graphic parts (CSS). Wireframes are crucial as they help identify potential issues that could occur early in the development process. 
+graphic parts (CSS). Wireframes are crucial as they help identify potential issues that could occur early in the development process. Discovering potential issues is highly important as it allows us to stay on track and get the website done on time 
 
 BMX FINDER wireframe:
 --
