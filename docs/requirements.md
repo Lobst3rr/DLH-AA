@@ -61,5 +61,13 @@ FR8: The Sytem could show exact directions to location on map
 ### Non-Functional Requirements
 
 Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
+NFR1: The system should use a default map of Bristol
+NFR2: No security is required (Security)
+NFR3: source code should be available on GitHub
+NFR4: The app should work on Chrome and other browsers
+NFR5:
+NFR6:
+NFR7:
+NFR8:
 
 Indicate which UC the requirement comes from.
