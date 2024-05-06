@@ -55,19 +55,18 @@ FR3: The system shall get ratings from google ratings <br>
 FR4: The system shall get traffic news from news <br>
 FR5: The system shall get bike routes from googlemap <br>
 FR6: The system shall get input from keyboard/user</b>
-FR7: The system won't share user data from system 
-FR8: The Sytem could show exact directions to location on map
+FR7: The system won't share user data from system <be>
+FR8: The System could show exact directions to location on map <br>
 
 ### Non-Functional Requirements
 
 Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
-NFR1: The system should use a default map of Bristol
-NFR2: No security is required (Security)
-NFR3: source code should be available on GitHub
-NFR4: The app should work on Chrome and other browsers
-NFR5:
-NFR6:
-NFR7:
-NFR8:
 
-Indicate which UC the requirement comes from.
+<b>NFR1: The system should use a default map of Bristol<br>
+NFR2: No security is required (Security)<br>
+NFR3: source code should be available on GitHub <br>
+NFR4: The app should work on Chrome and other browsers <br>
+NFR5: Marker should not be larger than 7% as it can obscure<br>
+NFR6: the data should be up to date as their are chances new facilities will open and old ones closing<br>
+NFR7: app should be responsive to user with a time limit of 5 seconds <br>
+
