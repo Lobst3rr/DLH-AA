@@ -23,6 +23,7 @@ Query is the circle that is between BMX-Finder, Open Data Bristol, and Mapbox su
 
 ## Bristol Open Data API
 TODO: Document each query to Bristol Open Data
+![Image 06-05-2024 at 22 28](https://github.com/Lobst3rr/DLH-AA/assets/148768725/29d143e5-0478-4327-a902-e1ce695d1101)
 
-![UML Class diagrams representing JSON query results](images/class1.png)
+
 TODO: Repeat as necessary
