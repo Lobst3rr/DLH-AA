@@ -26,5 +26,5 @@ Query is the circle that is between BMX-Finder, Open Data Bristol, and Mapbox su
 
 ![Image 07-05-2024 at 18 15](https://github.com/Lobst3rr/DLH-AA/assets/148768725/5dbd4f40-954e-49ac-86e2-16964f58b52a)
 
-The UML diagram that we made depicts how there is an hierarchical structure where the JSON object contains one or more feature objects. When it comes to feature each feature has a set of attributes describe specific characteristics as well as location that are described by coordinates.
+The UML diagram that we made depicts how there is a hierarchical structure where the JSON object contains one or more feature objects. When it comes to features each feature has a set of attributes that describe specific characteristics as well as locations that are represented by coordinates.
 
