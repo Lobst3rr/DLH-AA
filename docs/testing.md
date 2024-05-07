@@ -3,9 +3,11 @@
 ## Test Plan
 TODO: Describe any manual and automated (unit) tests. Uniquely identify each test case. Include prerequisites and test data.
 
-| Test-Case ID | Test type | Description | Description	Scenario |
-| ----------- | -----------| ---------   | ------                |
-| ----------- | -----------| ---------   | ------                |
+| Test-Case ID | Test type | Description | Scenario |
+| ----------- | -----------| ---------   | ------   |
+| TF1 | UAT| System shall get geo users location  | when the user is on the page it a pop up should come up asking to grant access to location  |
+| ----------- | -----------| ---------   | ------   |
+
 
 
 
