@@ -1,4 +1,4 @@
-# DLH-AA
+# BMX HotSpot
 
 Outline all the must spots to visit (have a review section as well)
 
