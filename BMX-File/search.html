@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+    <title>BMX HotSpot</title>
+    <style>
+      .table-container {
+          margin: 20px;
+          overflow-x: auto; 
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+      }
+      th {
+          background-color: #f2f2f2;
+      }
+      </style>
+      <style>
+            .home-link {
+    color: white; 
+    text-decoration: none; 
+}
+      </style>
+    
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header class="font-classic flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-black text-sm py-3 sm:py-0">
+        <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex text-xl gap-2 items-center justify-center font-semibold text-white" href="/" aria-label="Brand">
+                    <p class="flex-shrink-0 text-[16px] md:text-[20px]">BMX HotSpot</p>
+                    <a href="home.html" class="text-[16px] md:text-[20px]" class="home-link"> | Home</a>
+                </a>
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-indigo-500 text-indigo-500 hover:border-indigo-500 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                        
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero" class="bg-black font-classic pb-6 sm:pb-8 lg:pb-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div class="py-4"></div>
+            <section class="bg-gray-900 min-h-96 relative md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-16 overflow-hidden py-12 px-4 md:p-10 xl:p-12 rounded-lg">
+                <div class="flex flex-col justify-between">
+                    <div class="sm:text-center lg:py-12 lg:text-left xl:py-24">
+                        <p class="text-indigo-500 mb-4 font-semibold md:mb-6 md:text-lg xl:text-xl">
+                            Use the map below to find BMX parks near you.
+                        </p>
+                        <h1 class="text-white mb-8 text-4xl font-bold sm:text-5xl md:mb-12 md:text-4xl">
+                            BMX Facility Locator
+                        </h1>
+                    </div>
+                </div>
+                <div class="map-container" style="height: 100%; width: 100%;">
+                  <div id="map" style="height: 100%; width: 100%; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);"></div>
+            </section>
+        </div>
+    </div>
+    <script>
+      const MY_TOKEN = "pk.eyJ1IjoibDBic3RlcnIiLCJhIjoiY2x2bDZ5b256MjBycjJpbzVqcWZlczMzdyJ9.SfcJ8h_vULl_1YscfH9FAg";
+
+
+      
+      function addMarkers(json) {
+        let features = json.features;
+        for (i=0; i<features.length; i++) {
+          let a = features[i].attributes;
+          let g = features[i].geometry;
+
+          
+          let marker = new mapboxgl.Marker().setLngLat([g.x, g.y]).addTo(map);
+        }
+      }
+
+      function query() {
+        let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_transport/MapServer/28/query?where=1%3D1&outFields=*&outSR=4326&f=json";
+        fetch(url, { method: 'GET', headers: { 'Accept': 'application/json' }})
+          .then (response => response.json())
+          .then(addMarkers);
+      }
+  </script>
+  <div id="data-table" class="table-container">
+      <script>
+            fetch('https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/20/query?where=1%3D1&outFields=*&outSR=4326&f=json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('data-table');
+                    const table = document.createElement('table');
+                    let content = '<thead><tr><th>Name</th><th>Description</th><th>Latitude</th><th>Longitude</th></tr></thead><tbody>';
+            
+                    if (data.features && data.features.length) {
+                        data.features.forEach(feature => {
+                            const props = feature.attributes;
+                            const geom = feature.geometry;
+                            content += `<tr>
+                                            <td>${props.NAME}</td>
+                                            <td>${props.DESCRIPTION || 'N/A'}</td>
+                                            <td>${geom.y.toFixed(5)}</td>
+                                            <td>${geom.x.toFixed(5)}</td>
+                                        </tr>`;
+                        });
+                    }
+            
+                    content += '</tbody>';
+                    table.innerHTML = content;
+                    container.appendChild(table);
+                })
+                .catch(error => console.error('Failed to load data: ', error));
+            </script>
+  </div>
+
+    <!-- Footer Section -->
+    <div class="bg-white font-classic pt-4 sm:pt-10 lg:pt-12">
+        <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div class="mb-16 grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
+                <div class="col-span-full lg:col-span-2">
+                    <div class="mb-4 lg:-mt-2">
+                        <a class="text-black inline-flex items-center gap-2 text-xl font-bold md:text-2xl" href="/" aria-label="logo">
+                            <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-5 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M96 0V47L48 94H0V47L48 0H96Z"></path>
+                            </svg>
+                            <p class="flex-shrink-0">BMX HotSpot</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-500 mb-6 sm:pr-8">© 2024 BMX HotSpot. All rights reserved.</p>
+                </div>
+                <div>
+                    <div class="text-gray-500 mb-4 font-bold uppercase tracking-widest">QUICK LINKS</div>
+                    <a href="home.html" class="text-[16px] md:text-[20px]" class="home-link">Home</a>
+                    <!-- Placeholder for navigation items -->
+                </div>
+                <div>
+                    <div class="text-gray-500 mb-4 font-bold uppercase tracking-widest">CONNECT</div>
+                    <nav class="flex flex-col gap-4">
+                        <div><a class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100" href="https://www.facebook.com/">Facebook</a></div>
+                        <div><a class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100" href="https://www.instagram.com/">Instagram</a></div>
+                        <div><a class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100" href="https://www.youtube.com/">YouTube</a></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-gray-500 border-t py-8 text-center text-sm">
+                BMX HotSpot © 2024
+            </div>
+        </footer>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+    <script>
+        var urlParams = new URLSearchParams(location.search);
+          var lat = urlParams.get('lat');
+          var lon = urlParams.get('lon');
+          mapboxgl.accessToken = 'pk.eyJ1IjoibDBic3RlcnIiLCJhIjoiY2x2bDZ5b256MjBycjJpbzVqcWZlczMzdyJ9.SfcJ8h_vULl_1YscfH9FAg';
+        var map = new mapboxgl.Map({
+            container: 'map', 
+            style: 'mapbox://styles/mapbox/streets-v11', 
+            center: [-2.58791, 51.454513], 
+            zoom: 12 
+        });
+        fetch('https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/20/query?where=1%3D1&outFields=*&outSR=4326&f=json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.features && data.features.length) {
+                data.features.forEach(feature => {
+                    const properties = feature.attributes;
+                    const geometry = feature.geometry;
+
+                    if (geometry) {
+                        new mapboxgl.Marker()
+                            .setLngLat([geometry.x, geometry.y])
+                            .setPopup(new mapboxgl.Popup({ offset: 25 })
+                                .setHTML('<h3>' + properties.NAME + '</h3><p>' + properties.DESCRIPTION + '</p>'))
+                            .addTo(map);
+                    }
+                });
+            }
+        })
+        .catch(error => console.error('Error loading the map data: ', error));
+    </script>
+</body>
+</html>
