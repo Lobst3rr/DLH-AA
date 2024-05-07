@@ -6,6 +6,7 @@ TODO: Describe any manual and automated (unit) tests. Uniquely identify each tes
 | Test-Case ID | Test type | Description | Scenario |
 | ----------- | -----------| ---------   | ------   |
 | TF1 | UAT| System shall get geo users location  | when the user is on the page it a pop up should come up asking to grant access to location  |
+| TF2 | UAT| The system shall get the nearest BMX facilities from database   | When the user grants permission for access all BMX facilities in Bristol should pop up, especially the ones closest to the user.   |
 | ----------- | -----------| ---------   | ------   |
 
 
