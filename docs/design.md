@@ -14,4 +14,10 @@ When constructing the wireframe we opted to use whimsical tool as it has an easy
 
 
 ![BMX Finder](https://github.com/Lobst3rr/DLH-AA/assets/148768725/8745a05a-e40d-452b-84aa-033d49b34422)
-TODO: repeat as necessary
+
+REVIEW PAGE: We collectively agreed together that a review page will be needed as it'll help build trust and credibility with new visitors on the site. The review page will also allow us to showcase a variety of opinions and experiences that other riders have been through allowing others  making riders feel more confident in their decisions. Feedback from reviews will also provide valuable point of views into what riders like or dislike about the BMX facilities in Bristol. These feedbacks could also encourage facilities to improve on what needs to be improved it also makes it easier as the local council does not need to waste money on surveying on whats needed to be improved. 
+
+
+FQA: </b>We decided on adding man FQA page as It helps reduce the amount of workload for the customer support by supplying immediate answers to common questions that’ll most likely be asked allowing to focus more on important issues such as data breaches. It overall improves the overall user experience as well by making it easy for visitors of BMX-Finder to find quick solutions, reducing frustration and saving time.</b>
+
+ABOUT US: Having an about us page will provide opportunities to introduce the people to the purpose of BMX-Finder. The about us page will most likely include the following the inspiration for what we do, the backstory, mission, core value and insight to the team. About us page also will help us distinguish from other sites by highlighting our unique aspects .
