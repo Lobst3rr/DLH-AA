@@ -11,13 +11,8 @@
 | TF7 | UAT| The system won't share the user's data   | when the user is accessing the site with a log in personal information such as email or social media links will be kept private and under protection    |
 | TNF5 | UAT| Marker larger should not be larger than 7% as it can obscure view  | when user has different marker for all the facilities on the map in Bristol it should not be larger than 7% as it can obstruct the view of the location and be unvisually appealing     |
 
+## Test Runs
 
-
-
-
-Test Runs
-
-Create a requirements traceability matrix to validate the completeness of the product.
 
 | Use-Case ID | Requirement ID | Test Case | Status |
 | ----------- | -------------- | --------- | ------ |
