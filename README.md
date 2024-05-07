@@ -1,6 +1,6 @@
 # BMX HotSpot
 
-Outline all the must spots to visit (have a review section as well)
+BMX HotSpot is an application/ website that allows riders whether they are on bikes, skateboards or scooters to find the nearest facility to safely practice their stunts and skills. One of the main goals of BMX HotSpot is to reduce the number of safety hazards that could occur in the streets as well as keeping riders safe for example, crashes and accidents with people walking by. 
 
 * [Planning](docs/planning.md)
 * [Requirements](docs/requirements.md)
