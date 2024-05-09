@@ -59,7 +59,7 @@ FR8: The System could show exact directions to location on map <br>
 
 ### Non-Functional Requirements Defyn
 
-Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
+
 
 <b>NFR1: The system should use a default map of Bristol<br>
 NFR2: No security is required (Security)<br>
