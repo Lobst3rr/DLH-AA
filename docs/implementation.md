@@ -6,7 +6,7 @@ TODO: Describe the system implemented (Describe the dataset. Are there any known
 
 
 
-## Project Structure defyn
+## Project Structure 
 
 
 The image below it showcases how there are 4 pages of code home.html, search.html, layout.css and RouteSuggestions. home.html is the main menu meaning that this page is where users will be first introduced to and navigate through, search.html is also integrated with home.html search.html inclused the map of facilities as well as all the table displaying all the information of the facilieties, layout.css contains the CSS for the website bringing the final look togteher.
@@ -15,7 +15,7 @@ The image below it showcases how there are 4 pages of code home.html, search.htm
 When it comes to the doc folder it contains all of the relevant/ important documentation for the website/app.
 ![Image 07-05-2024 at 20 40](https://github.com/Lobst3rr/DLH-AA/assets/148768725/efc05a49-cbe6-496b-a4af-8df1209e3b8c)
 
-## Software Architecture ayub
+## Software Architecture 
 
 The architecture diagram provided below showcases how there are four major components. Which are the following BMX-Finder, open data Bristol, Maxp-Box and query. 
 THE BMX-Finder component is positioned centrally. This is due to the reason that it acts as the primary application. The BMX-Finder component processes and manages queries making it serving the interface between the user and the data sources. 
