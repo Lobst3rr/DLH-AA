@@ -2,7 +2,7 @@
 
 ## User Interface design 
 
-defyn part:
+
 
 when it comes to wireframes we know them as a visual representation of what a website layout would look like. Looking at 
 wireframes it is used to focus more on arrangements such as functionality rather than aesthetics and looks as it is the 
@@ -11,12 +11,12 @@ graphic parts (CSS). Wireframes are crucial as they help identify potential issu
 
 BMX-Finder (BMX HotSpot) wireframe: 
 --
-Ayub part:
+
 
 When constructing the wireframe we opted to use whimsical tool as it has an easy layout and made it easier to group everything together making us visually see how each page of the BMX HotSpot website would look when made. One of the fundamentals of the website is the heading on each page of the site as it visually makes it clear to visitors what site they are on. For example, a scenario in which this can occur is when they leave the tab of BMX HotSpot and they're on another page of the site that does not contain the heading and come back after a while they would most likely forget what website they are on and close the tab fully decreasing engagement and traffic. Overall from the Wireframe presented you are able to identify how it has a basic navigation system such as About us, FQA, and a map an important feature as it's primarily the main feature that's going to be used by all visitors of the website. One of the main features that are represented on each page is laid out in a way that is straightforward, clean manner, this allows visitors to easily understand the site's structure and navigation paths. The simplicity of the layout helps more on focusing on usability and the flow. The wireframe also uses alternative text and simple boxes to indicate where actual content and interactive elements will be placed on the website, which is a typical approach in wireframing to maintain focus on layout and functionality.
 
 
-ayub&defyn:
+
 ![BMX Finder](https://github.com/Lobst3rr/DLH-AA/assets/148768725/8745a05a-e40d-452b-84aa-033d49b34422) 
 
 Ayub part:
