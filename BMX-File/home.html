@@ -48,7 +48,7 @@
           <nav class="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
          
               <!-- Route Suggestions Tab -->
-              <button type="button" class="hover:bg-gray-300 hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start p-4 md:p-5 rounded-xl dark:focus:outline-none dark:focus:ring-1 active" id="tabs-with-card-item-2" data-hs-tab="#tabs-with-card-2" aria-controls="tabs-with-card-2" role="tab">
+              <button type="button" class="hover:bg-gray-300 hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-start p-4 md:p-5 rounded-xl dark:focus:outline-none dark:focus:ring-1 active" id="routeSuggestionsButton" data-hs-tab="#tabs-with-card-2" aria-controls="tabs-with-card-2" role="tab">
                   <span class="flex">
                      
                       <svg class="flex-shrink-0 mt-2 size-6 md:size-7 text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -60,7 +60,14 @@
                           <span class="block mt-1 text-gray-500">Receive optimal and traffic-free route suggestions to your destination.</span>
                       </span>
                   </span>
+                  
               </button>
+              <script>
+                document.getElementById('routeSuggestionsButton').addEventListener('click', function() {
+                    window.location.href = 'RouteSuggestions.html';
+                });
+            </script>
+              
           </nav>
       </div>
       <div class="lg:col-span-6 w-full lg:w-1/2">
@@ -87,7 +94,11 @@
             <div>
                 <div class="text-gray-400 mb-4 font-bold uppercase tracking-widest">QUICK LINKS</div>
                 <a href="search.html" class="text-[16px] md:text-[20px]" class="home-link"> Search</a>
+                <nav class="flex flex-col gap-4"></nav>
+                <a href="RouteSuggestions.html" class="text-[16px] md:text-[20px]" class="home-link"> Route Suggestions</a>
+                <nav class="flex flex-col gap-4"></nav>
             </div>
+
             
         </div>
     </footer>

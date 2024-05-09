@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title>BMX HotSpot</title>
+    <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps.css">
+    <style>
+        #map {
+            width: 100%; 
+            height: 100%; 
+            border-radius: 8px; 
+        }
+    </style>
+</head>
+<body>
+    <header class="font-ocean flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-black text-sm py-3 sm:py-0">
+        <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex text-xl gap-2 items-center justify-center font-semibold text-white" aria-label="Brand" href="/">
+                    <p class="flex-shrink-0 text-[16px] md:text-[20px]">BMX Hotspot</p>
+                </a>
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border text-blue-500 hover:border-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="6" y2="6"></line>
+                            <line x1="3" x2="21" y1="12" y2="12"></line>
+                            <line x1="3" x2="21" y1="18" y2="18"></line>
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7"></div>
+            </div>
+        </nav>
+    </header>
+    <div id="hero" class="bg-black font-ocean pb-6 sm:pb-8 lg:pb-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div class="py-4"></div>
+            <section class="bg-gray-900 min-h-96 relative md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-16 overflow-hidden py-12 px-4 md:p-10 xl:p-12 rounded-lg">
+                <div class="flex flex-col justify-between">
+                    <div class="sm:text-center lg:py-12 lg:text-left xl:py-24">
+                        <p class="text-blue-500 mb-4 font-semibold md:mb-6 md:text-lg xl:text-xl">Stay updated with the latest traffic conditions in Bristol.</p>
+                        <h1 class="text-white mb-8 text-4xl font-bold sm:text-5xl md:mb-12 md:text-4xl">Real-Time Traffic Warnings</h1>
+                    </div>
+                </div>
+                <div>
+                    <!-- Map container -->
+                    <div id="map"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="bg-white font-energetic pt-4 sm:pt-10 lg:pt-12">
+        <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div class="mb-16 grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
+                <div class="col-span-full lg:col-span-2">
+                    <div class="mb-4 lg:-mt-2">
+                        <a class="text-black inline-flex items-center gap-2 text-xl font-bold md:text-2xl" aria-label="logo" href="/">
+                            <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-5 text-orange-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M96 0V47L48 94H0V47L48 0H96Z"></path>
+                            </svg>
+                            <p class="flex-shrink-0">BMX Hotspot</p>
+                        </a>
+                    </div>
+                    <p class="text-gray-500 mb-6 sm:pr-8">© 2024 BMX Hotspot. All rights reserved.</p>
+                </div>
+                <div>
+                    <div class="text-gray-500 mb-4 font-bold uppercase tracking-widest">QUICK LINKS</div>
+                    <nav class="flex flex-col gap-4"></nav>
+                </div>
+
+            </div>
+            <div class="text-gray-500 border-t py-8 text-center text-sm">BMX Hotspot © 2024</div>
+        </footer>
+    </div>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.12.0/maps/maps-web.min.js"></script>
+    <script>
+        var map = tt.map({
+            key: 'bHG8KQRnEmp7WP024FF3FAsN9cRFhGTi',
+            container: 'map',
+            style: 'tomtom://vector/1/basic-main',
+            center: [-2.58791, 51.454514], 
+            zoom: 12
+        });
+
+       
+        map.on('load', function () {
+            map.addLayer({
+                'id': 'realtimeTraffic',
+                'type': 'vector',
+                'source': 'tomtom://vector/1/traffic',
+                'source-layer': 'Traffic flow'
+            });
+        });
+    </script>
+</body>
+</html>
